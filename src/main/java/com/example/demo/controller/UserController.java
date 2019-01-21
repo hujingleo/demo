@@ -57,8 +57,7 @@ public class UserController {
         UserEntity user = new UserEntity();
                 user.setUsername(username);
                 user.setPassword(password);
-		userService.insert(user);
-
+		boolean result = userService.insert(user);
         return R.ok();
     }
 
